@@ -1,0 +1,12 @@
+---
+# tasks file for obs-studio
+
+- name: Setup RPMFusion repositories
+  import_role:
+    name: jaredhocutt.rpmfusion
+
+- name: Install obs-studio
+  dnf:
+    name: obs-studio
+    state: present
+  become: yes
